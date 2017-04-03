@@ -11,6 +11,7 @@ import org.benchmarx.families.core.FamiliesComparator;
 import org.benchmarx.persons.core.PersonsComparator;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
@@ -21,7 +22,6 @@ import org.moflon.tgg.algorithm.synchronization.SynchronizationHelper;
 
 import Families.FamiliesFactory;
 import Families.FamilyRegister;
-import FamiliesToPersons.FamiliesToPersonsPackage;
 import Persons.PersonRegister;
 
 /**
@@ -47,7 +47,9 @@ public class EMoflonFamiliesToPersons extends BXToolForEMF<FamilyRegister, Perso
 	@Override
 	public void initiateSynchronisationDialogue() {
 		BasicConfigurator.configure();
-		helper = new SynchronizationHelper(FamiliesToPersonsPackage.eINSTANCE, "../implementationArtefacts/emoflon/FamiliesToPersons");
+		Resource corrMetaRes = helper.getResourceSet().createResource(URI.createURI("platform:/plugin/FamiliesToPersons/model/FamiliesToPersons.ecore"));
+
+		helper = new SynchronizationHelper((EPackage) corrMetaRes.getContents().get(0), "../implementationArtefacts/emoflon/FamiliesToPersons");
 		Resource r = helper.getResourceSet().createResource(URI.createURI("sourceModel"));
 		FamilyRegister familiesRoot = FamiliesFactory.eINSTANCE.createFamilyRegister();
 		r.getContents().add(familiesRoot);

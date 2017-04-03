@@ -1,26 +1,32 @@
 Manifest-Version: 1.0
-Bundle-SymbolicName: FamiliesToPersons;singleton:=true
-Export-Package: FamiliesToPersons,
- FamiliesToPersons.Rules,
- FamiliesToPersons.Rules.impl,
- FamiliesToPersons.Rules.util,
- FamiliesToPersons.impl,
- FamiliesToPersons.util,
- org.moflon.tie
+Bundle-SymbolicName: FamiliesToPersons_old;singleton:=true
+Export-Package: org.emoflon.ibex.tgg.common,
+ org.emoflon.ibex.tgg.common.util,
+ org.emoflon.ibex.tgg.operational.csp.constraints.factories,
+ org.emoflon.ibex.tgg.run
 Bundle-Name: FamiliesToPersons
-Bundle-Version: 1.0.0.qualifier
-Require-Bundle: org.eclipse.emf.ecore,
- org.eclipse.emf.ecore.xmi,
- org.moflon.core.utilities,
+Bundle-Version: 1.0
+Require-Bundle: org.eclipse.viatra.transformation.runtime.emf;bundle-version="1.5.0",
+ org.eclipse.viatra.query.runtime;bundle-version="1.5.0",
+ org.eclipse.viatra.transformation.evm;bundle-version="1.5.0",
+ org.eclipse.viatra.transformation.evm.transactions;bundle-version="1.5.0",
+ org.eclipse.viatra.query.runtime.base.itc;bundle-version="1.5.0",
  org.apache.log4j;bundle-version="1.2.15",
+ com.google.guava;bundle-version="15.0.0",
+ org.eclipse.xtend.lib;bundle-version="2.10.0",
+ org.emoflon.ibex.tgg.core.language;bundle-version="1.0.0",
+ org.moflon.core.utilities,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.ecore.xmi,
  MocaTree,
  org.eclipse.core.runtime,
  SDMLanguage,
  org.moflon.tgg.language,
  org.moflon.tgg.runtime,
  Families;bundle-version="1.0.0",
- Persons;bundle-version="1.0.0"
+ Persons;bundle-version="1.0.0",
+ org.emoflon.ibex.tgg.core.runtime;bundle-version="1.0.0"
 Bundle-ManifestVersion: 2
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Bundle-Vendor: TU Darmstadt
+Bundle-Vendor: eMoflon IBeX

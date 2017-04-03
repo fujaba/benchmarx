@@ -3,7 +3,13 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Benchmarx
 Bundle-SymbolicName: Benchmarx
 Bundle-Version: 1.0.0.qualifier
-Export-Package: org.benchmarx
+Export-Package: org.benchmarx,
+ org.benchmarx.compare
 Require-Bundle: org.eclipse.emf.ecore;bundle-version="2.11.2",
  org.eclipse.emf.ecore.xmi;bundle-version="2.11.1",
- org.junit
+ org.junit,
+ com.google.guava,
+ org.eclipse.xtext.xbase.lib,
+ org.eclipse.xtend.lib,
+ org.eclipse.xtend.lib.macro
+

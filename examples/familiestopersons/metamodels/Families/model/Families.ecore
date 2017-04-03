@@ -30,4 +30,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="daughtersInverse" eType="#//Family"
         eOpposite="#//Family/daughters"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Parent" abstract="true" eSuperTypes="#//FamilyMember"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Father" eSuperTypes="#//Parent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Mother" eSuperTypes="#//Parent"/>
 </ecore:EPackage>

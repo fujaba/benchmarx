@@ -36,5 +36,7 @@ public interface BXTool<S, T, D> {
 	
 	public void saveModels(String name);
 	
+	public void disposeSynchronisationDialogue();
+	
 	default public String getName() { return "Please set the name of your bx tool!"; }
 }
