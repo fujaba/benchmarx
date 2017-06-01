@@ -21,5 +21,6 @@
 	<classpathentry kind="lib" path="lib/mediniQVT/mediniQVT.jar"/>
 	<classpathentry kind="lib" path="lib/mediniQVT/qvtemf.jar"/>
 	<classpathentry kind="lib" path="lib/FunnyQT/ttc17-families2persons-bx-1.0.0-standalone.jar"/>
+	<classpathentry kind="lib" path="lib/org.fujaba.graphengine-all.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

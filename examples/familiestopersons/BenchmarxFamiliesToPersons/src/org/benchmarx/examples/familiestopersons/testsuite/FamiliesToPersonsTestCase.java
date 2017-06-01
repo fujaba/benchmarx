@@ -5,13 +5,7 @@ import java.util.Collection;
 
 import org.benchmarx.BXTool;
 import org.benchmarx.emf.Comparator;
-import org.benchmarx.examples.familiestopersons.implementations.nmf.NMFFamiliesToPersonsIncremental;
-import org.benchmarx.examples.familiestopersons.implementations.bigul.BiGULFamiliesToPersons;
-import org.benchmarx.examples.familiestopersons.implementations.bxtend.UbtXtendFamiliesToPersons;
-import org.benchmarx.examples.familiestopersons.implementations.emoflon.EMoflonFamiliesToPersons;
-import org.benchmarx.examples.familiestopersons.implementations.funnyqt.FunnyQTFamiliesToPerson;
-import org.benchmarx.examples.familiestopersons.implementations.medini.MediniQVTFamiliesToPersons;
-import org.benchmarx.examples.familiestopersons.implementations.medini.MediniQVTFamiliesToPersonsConfig;
+import org.benchmarx.examples.familiestopersons.implementations.yage.YageFAmiliesToPersons;
 import org.benchmarx.families.core.FamiliesComparator;
 import org.benchmarx.families.core.FamilyHelper;
 import org.benchmarx.persons.core.PersonHelper;
@@ -48,8 +42,9 @@ public abstract class FamiliesToPersonsTestCase {
 		familiesComparator = new FamiliesComparator();
 		personsComparator = new PersonsComparator();
 		util = new BenchmarxUtil<>(tool);
-		helperFamily = new FamilyHelper();
-		helperPerson = new PersonHelper();
+//		helperFamily = new FamilyHelper();
+//		helperPerson = new PersonHelper();
+		
 		
 		// Initialise the bx tool
 		tool.initiateSynchronisationDialogue();
@@ -63,19 +58,21 @@ public abstract class FamiliesToPersonsTestCase {
 	@Parameters
 	public static Collection<BXTool<FamilyRegister, PersonRegister, Decisions>> tools() {
 		return Arrays.asList(
-				new BiGULFamiliesToPersons()  // Currently 9 failures
-				,
-				new EMoflonFamiliesToPersons()  // Currently 6 failures
-				,
-				new MediniQVTFamiliesToPersons() // Currently 19 failures
-				,
-				new MediniQVTFamiliesToPersonsConfig() // Currently 12 failures
-				,
-				new UbtXtendFamiliesToPersons()  // Currently 0 failures
-				,
-				new FunnyQTFamiliesToPerson() // Currently 10 failures
-				,
-				new NMFFamiliesToPersonsIncremental() // Currently 6 failures
+//				new BiGULFamiliesToPersons()  // Currently 9 failures
+//				,
+//				new EMoflonFamiliesToPersons()  // Currently 6 failures
+//				,
+//				new MediniQVTFamiliesToPersons() // Currently 19 failures
+//				,
+//				new MediniQVTFamiliesToPersonsConfig() // Currently 12 failures
+//				,
+//				new UbtXtendFamiliesToPersons()  // Currently 0 failures
+//				,
+//				new FunnyQTFamiliesToPerson() // Currently 10 failures
+//				,
+//				new NMFFamiliesToPersonsIncremental() // Currently 6 failures
+
+         new YageFAmiliesToPersons()
 			);
 	}
 	
